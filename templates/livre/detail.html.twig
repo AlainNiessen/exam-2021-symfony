@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Detail Livres{% endblock %}
+
+{% block body %}
+<section class="detail">
+    <h1>Détail du livre "{{ livre.getTitre() }}"</h1>
+    <h2>Un résumé</h2>
+    <p>{{ livre.getResume() }}
+    <h2>Date de création</h2>
+    <p>{{ livre.getDateAjout|date('d-M-Y')}}</p>
+    <h2>Genre</h2>
+    <p>{{ livre.getGenre().getNom() }}
+    <h2>Score de votes</h2>
+    <p>{{ livre.getVotes() }}
+</section>
+{% endblock %}

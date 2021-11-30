@@ -1,0 +1,17 @@
+1, Lequel des éléments suivants peut être utilisé pour instancier un objet en PHP en supposant que le
+nom de la classe soit « MaClass »?
+
+=> B 
+
+2, La clause Extends est utilisée pour____?
+
+=> A (extends veut dire élargir, donc une class va élargir une autre class (c'est-à-dire hériter de cette class))
+
+3. Lequel des mots-clés suivants est utilisé pour implémenter une interface?
+
+=> A
+
+4 Quel mot-clé est utilisé pour empêcher l’héritage?
+
+=> B (final class veut dire que on peut instancier cette class, mais cette class ne peut pas être hérité (abstract class est le contraire, 
+on ne peut pas instancié cette class, mais elle peut être hérité))

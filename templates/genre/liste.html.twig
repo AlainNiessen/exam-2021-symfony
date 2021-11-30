@@ -9,12 +9,14 @@
         <thead> 
             <tr>
                 <th>Genres</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for genre in genres%}
             <tr>
                 <td>{{ genre.nom }}</td>
+                <td><a href="{{ path('genreFormModif', {id: genre.id}) }}" class="btn btn-primary">Modification</a></td>
             </tr>
         </tbody>
         {% endfor %}

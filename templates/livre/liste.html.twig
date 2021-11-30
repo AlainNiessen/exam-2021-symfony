@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste Livres{% endblock %}
+
+{% block body %}
+<section class="liste">
+    <h1>Liste de livres</h1>
+    <table class="table">
+        <thead> 
+            <tr>
+                <th>Livres</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for livre in livres%}
+            <tr>
+                <td>{{ livre.titre }}</td>
+                <td>
+                    <a href="{{ path('livreDetail', {id: livre.id}) }}" class="btn btn-primary">Détail</a>
+                    <a href="{{ path('livreFormModif', {id: livre.id}) }}" class="btn btn-primary">Modification</a>
+                    {# ajout d'un onclick qui demande une confirmation de la suppression#}
+                    <a href="{{ path('livreSupprim', {id: livre.id}) }}" class="btn btn-danger" onclick='return confirm("Voulez-vous vraiment supprimer ce livre?")'>Suppression</a>
+                <td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</section>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification Genre{% endblock %}
+
+{% block body %}
+<section class="form">
+    <h1 class="formTitre">Modification du genre "{{ genre.getNom() }}"</h1>
+    {{ form(formModifGenre) }}
+</section>
+{% endblock %}
