@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste Genre{% endblock %}
+
+{% block body %}
+<section class="liste">
+    <h1>Liste de genres</h1>
+    <table class="table">
+        <thead> 
+            <tr>
+                <th>Genres</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for genre in genres%}
+            <tr>
+                <td>{{ genre.nom }}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</section>
+{% endblock %}
