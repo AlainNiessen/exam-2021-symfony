@@ -13,6 +13,7 @@ class HomeController extends AbstractController
      */
     public function index(): Response
     {
+        //création d'un text de bienvenue
         $textBienvenue = "Bienvenue au catalogue de livres!";
 
         return $this->render('home/index.html.twig', [
